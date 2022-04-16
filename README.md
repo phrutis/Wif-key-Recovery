@@ -3,6 +3,7 @@ Programs GPU and CPU for restoring part (end) of a WIF private key</br>
 This is a modified version of [Rotor-Cuda](https://github.com/phrutis/Rotor-Cuda) recovers missing characters for key from address(es) bitcoin and ethereum and public key(s)</br>
 Fast speed and ease of use will ease your recovery WIF private key from paper wallet. </br>
 Multiple GPU cards can be used for large end key</br>
+To restore the middle of the key, use [**WifSolverCuda**](https://github.com/phrutis/WifSolverCuda)</br>
 
 ### Example GPU
 Finding part of the Compressed WIF private key on the GPU
@@ -68,6 +69,10 @@ Run: ```Rotor-Cuda.exe -t 0 -g --gpui 0 --gpux 256,256 -wif KwDmUPELZRrrc5q2k -m
 
 GPU Public key Single X Point mode:</br>
 Run: ```Rotor-Cuda.exe -t 0 -g --gpui 0 --gpux 256,256 -wif KwDmUPELZRrrc5q2k -m xpoint --coin BTC ceb6cbbcdbdf5ef7150682150f4ce2c6f4807b349827dcdbdd1f2efa885a2630```</br>
+
+For Multi GPU use:</br>
+Run 8 GPUs: ```Rotor-Cuda.exe -t 0 -g --gpui 0,1,2,3,4,5,6,7 --gpux 256,256,256,256,256,256,256,256,256,256,256,256,256,256,256,256 -wif KwDmUPELZRrrc5q2knEYhh8QqUvneZ6WMcYz -m address --coin BTC 1ByGDsGaosE24BLK2eHfxFPP2DRZTrPrGU```
+
 - [**How to create databases**](https://github.com/phrutis/Rotor-Cuda/blob/main/Others/) and [**additional parameters**](https://github.com/phrutis/Rotor-Cuda/blob/main/Others/Help.md)
 
 ## Building
